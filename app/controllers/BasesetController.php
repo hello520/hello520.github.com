@@ -1,6 +1,6 @@
 <?php
 
-class HomeController extends BaseController {
+class BasesetController extends BaseController {
 
 	/*
 	|--------------------------------------------------------------------------
@@ -18,7 +18,7 @@ class HomeController extends BaseController {
 	public function index()
 	{
 		//echo 22;
-		return View::make('hello');
+		return View::make('baseset.baseset');
 	}
 
 }

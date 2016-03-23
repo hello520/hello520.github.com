@@ -6,10 +6,10 @@
                     Main Menu
                 </li>
                 <li class="bg-palette1 active">
-                    <a href="index.html">
+                    <a href="{{url('base/set')}}">
 									<span class="menu-content block">
 										<span class="menu-icon"><i class="block fa fa-home fa-lg"></i></span>
-										<span class="text m-left-sm">栏目一</span>
+										<span class="text m-left-sm">基本设置</span>
 									</span>
 									<span class="menu-content-hover block">
 										Home
@@ -20,7 +20,7 @@
                     <a href="landing/landing.html">
 									<span class="menu-content block">
 										<span class="menu-icon"><i class="block fa fa-desktop fa-lg"></i></span>
-										<span class="text m-left-sm">栏目二</span>
+										<span class="text m-left-sm"></span>
 									</span>
 									<span class="menu-content-hover block">
 										栏目一
@@ -31,7 +31,7 @@
                     <a href="#">
 									<span class="menu-content block">
 										<span class="menu-icon"><i class="block fa fa-list fa-lg"></i></span>
-										<span class="text m-left-sm">栏目三</span>
+										<span class="text m-left-sm">分类设置</span>
 										<span class="submenu-icon"></span>
 									</span>
 									<span class="menu-content-hover block">
@@ -49,7 +49,7 @@
                     <a href="#">
 									<span class="menu-content block">
 										<span class="menu-icon"><i class="block fa fa-tags fa-lg"></i></span>
-										<span class="text m-left-sm">栏目四</span>
+										<span class="text m-left-sm">文章管理</span>
 										<span class="submenu-icon"></span>
 									</span>
 									<span class="menu-content-hover block">
@@ -92,7 +92,7 @@
                     <a href="timeline.html">
 									<span class="menu-content block">
 										<span class="menu-icon"><i class="block fa fa-clock-o fa-lg"></i></span>
-										<span class="text m-left-sm">栏目六</span>
+										<span class="text m-left-sm">清除缓存</span>
 										<small class="badge badge-warning badge-square bounceIn animation-delay6 m-left-xs pull-right">7</small>
 									</span>
 									<span class="menu-content-hover block">

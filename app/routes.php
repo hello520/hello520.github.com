@@ -47,4 +47,6 @@ Route::get('home',function(){
 
 Route::get('user/index','UserController@index');
 
+Route::get('base/set','BasesetController@index');
+
 
