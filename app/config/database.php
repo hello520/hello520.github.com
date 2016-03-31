@@ -55,12 +55,12 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'test',
+			'database'  => 'cms',
 			'username'  => 'root',
 			'password'  => 'root',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
-			'prefix'    => 'c_',
+			'prefix'    => 'kt_',
 		),
 
 		'pgsql' => array(

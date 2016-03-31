@@ -8,7 +8,7 @@
 class IndexController extends BaseController{
 
     public function index(){
-       return View::make('Index.index');
+       return View::make('index.index');
     }
     public function nav(){
         echo('//查询');

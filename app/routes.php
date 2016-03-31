@@ -1,52 +1,59 @@
 <?php
+//登陆
+	# 登录
+	Route::get('login',array('uses' => 'AuthController@getlogin'));
+	Route::post('login',array('uses' => 'AuthController@postlogin'));
 
 /*
 |--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the Closure to execute when that URI is requested.
-|
-*/
-
-
-Route::get('/','IndexController@index');
-
-Route::group(array('prefix' => 'nav'), function () {
-	Route::get('/','IndexController@nav');
-	Route::post('/add','IndexController@nav_add');
-});
-
-Route::get('test', function()
+| 管理员后台
+|--------------------------------------------------------------------------*/
+Route::group(array('before' => 'auth'), function()
 {
-	return 'test';
+	Route::get('/','ApplicationController@index');
+
+	Route::get('/category','CategoryController@index');
+	Route::match(array('GET', 'POST'),'/category/add','CategoryController@add');
+
+	Route::get('/category/edit/{id}', 'CategoryController@edit')->where('id', '[0-9]+');
+
+	Route::get('/category/delete/{id}', 'CategoryController@delete')->where('id', '[0-9]+');
+
+	Route::get('/logout','AuthController@logout');
+	//Route::post('/category/add','CategoryController@postadd');
+	Route::group(array('prefix' => 'app'), function()
+	{
+		Route::get('/','ApplicationController@index');
+		Route::get('add','ApplicationController@add');
+		Route::post('add','ApplicationController@updateApp');
+		Route::get('edit/{id}','ApplicationController@edit')->where('id', '[0-9]+');
+		Route::get('delete/{id}', 'ApplicationController@delete')->where('id', '[0-9]+');
+
+		Route::get('fdelete/{id}', 'ApplicationController@fdelete')->where('id', '[0-9]+');
+		Route::get('recycle/{id}', 'ApplicationController@recycle')->where('id', '[0-9]+');
+
+		Route::get('order','ApplicationController@order');
+
+	});
+	Route::group(array('prefix' => 'auth'), function()
+	{
+		Route::get('/','AuthController@index');
+		Route::get('add','AuthController@add');
+		Route::post('add','AuthController@add');
+		Route::get('edit/{id}','AuthController@edit')->where('id', '[0-9]+');
+		Route::get('delete/{id}', 'AuthController@delete')->where('id', '[0-9]+');
+
+		Route::get('fdelete/{id}', 'AuthController@fdelete')->where('id', '[0-9]+');
+		Route::get('recycle/{id}', 'AuthController@recycle')->where('id', '[0-9]+');
+	});
+	Route::group(array('prefix' => 'recycle'), function()
+	{
+		Route::get('/','RecycleController@index');
+	});
+
+	Route::group(array('prefix' => 'api'), function()
+	{
+		Route::get('/','ApiController@get');
+	});
 });
-Route::get('userinfo', 'UserController@userInfo');
-Route::get('user/{id}', 'UserController@getUser')->where('id', '[0-9]+');
-Route::get('proc', 'ProcController@show');
-
-Route::get('post/index','App/Controller/Home/PostController@index');
-
-//Route::get('home','HomeController@index');
-/*Route::get('home',function(){
-		return 111;
-});*/
-Route::get('home/redirect',function(){
-	return 111;
-});
-//Route::get('home','HomeController@index');
-Route::get('home',function(){
-	//return Response::view('hello')->header('Content-Type','no-cache');
-	//$cookie = Cookie::make('name','tome');
-	//return Response::view('hello')->withCookie($cookie);
-	//return Redirect::to('home/redirect')->with('name','tome');
-	//return Redirect::action('HomeController@index');
-});
-
-Route::get('user/index','UserController@index');
-
-Route::get('base/set','BasesetController@index');
-
 

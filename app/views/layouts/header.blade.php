@@ -1,5 +1,5 @@
 <head>
-    <title>Civil Engineer  A industrial category Flat bootstrap Responsive  Website Template | Home :: w3layouts</title>
+    <title>应用管理</title>
     <link href="{{ URL::asset('/') }}css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="{{ URL::asset('/') }}js/jquery-1.11.0.min.js"></script>
@@ -8,12 +8,8 @@
     <!-- Custom Theme files -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="Civil Engineer Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <meta name="keywords" content="" />
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-    <!--Google Fonts-->
-    <link href='//fonts.googleapis.com/css?family=Squada+One' rel='stylesheet' type='text/css'>
-    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700,900' rel='stylesheet' type='text/css'>
     <!-- start-smoth-scrolling -->
     <script type="text/javascript" src="{{ URL::asset('/') }}js/move-top.js"></script>
     <script type="text/javascript" src="{{ URL::asset('/') }}js/easing.js"></script>

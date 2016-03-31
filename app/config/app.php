@@ -1,5 +1,4 @@
 <?php
-
 return array(
 
 	/*
@@ -78,7 +77,8 @@ return array(
 	|
 	*/
 
-	'key' => 'YourSecretKey!!!',
+	//'key' => 'YourSecretKey!!!',
+	'key' => '0123456789123456',
 
 	'cipher' => MCRYPT_RIJNDAEL_128,
 
